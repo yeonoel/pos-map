@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inscription.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <header>
+    Only for POS
+  </header>
+
+    <div class="container">
+
+        <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+      <fieldset>
+    
+        <!-- Form Name -->
+        <legend>Location informatons</legend>
+        
+        <!-- Text input-->
+        
+        <div class="form-group1">
+          
+          
+            <div class="form-group">
+              <label for=" ">save current position <i style="font-size: small;">as your place of service pos</i>? </label>
+              <input type="checkbox" name="" id="pos_inscription_location">
+            </div>
+          
+          <br>
+          <div class="form-group">
+            <label class="col-md-4 control-label">Contry :</label>
+            <div class="col-md-4 selectContainer">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                  <select name="state" class="state" >
+                    <option value="" selected disabled >Please select your contry</option>
+                    <option value="algeria">Algeria</option>
+                    <option value="angola">Angola</option>
+                    <option value="benin">Benin</option>
+                    <option value="botswana">Botswana</option>
+                    <option value="burkina Faso">Burkina Faso</option>
+                    <option value="burundi">Burundi</option>
+                    <option value="cameroon">Cameroon</option>
+                    <option value="cape-verde">Cape Verde</option>
+                    <option value="central-african-republic">Central African Republic</option>
+                    <option value="chad">Chad</option>
+                    <option value="comoros">Comoros</option>
+                    <option value="congo-brazzaville">Congo - Brazzaville</option>
+                    <option value="congo-kinshasa">Congo - Kinshasa</option>
+                    <option value="ivory-coast">Côte d’Ivoire</option>
+                    <option value="djibouti">Djibouti</option>
+                    <option value="egypt">Egypt</option>
+                    <option value="equatorial-guinea">Equatorial Guinea</option>
+                    <option value="eritrea">Eritrea</option>
+                    <option value="ethiopia">Ethiopia</option>
+                    <option value="gabon">Gabon</option>
+                    <option value="gambia">Gambia</option>
+                    <option value="ghana">Ghana</option>
+                    <option value="guinea">Guinea</option>
+                    <option value="guinea-bissau">Guinea-Bissau</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="lesotho">Lesotho</option>
+                    <option value="liberia">Liberia</option>
+                    <option value="libya">Libya</option>
+                    <option value="madagascar">Madagascar</option>
+                    <option value="malawi">Malawi</option>
+                    <option value="mali">Mali</option>
+                    <option value="mauritania">Mauritania</option>
+                    <option value="mauritius">Mauritius</option>
+                    <option value="mayotte">Mayotte</option>
+                    <option value="morocco">Morocco</option>
+                    <option value="mozambique">Mozambique</option>
+                    <option value="namibia">Namibia</option>
+                    <option value="niger">Niger</option>
+                    <option value="nigeria">Nigeria</option>
+                    <option value="rwanda">Rwanda</option>
+                    <option value="reunion">Réunion</option>
+                    <option value="saint-helena">Saint Helena</option>
+                    <option value="senegal">Senegal</option>
+                    <option value="seychelles">Seychelles</option>
+                    <option value="sierra-leone">Sierra Leone</option>
+                    <option value="somalia">Somalia</option>
+                    <option value="south-africa">South Africa</option>
+                    <option value="sudan">Sudan</option>
+                    <option value="south-sudan">Sudan</option>
+                    <option value="swaziland">Swaziland</option>
+                    <option value="Sao-tome-príncipe">São Tomé and Príncipe</option>
+                    <option value="tanzania">Tanzania</option>
+                    <option value="togo">Togo</option>
+                    <option value="tunisia">Tunisia</option>
+                    <option value="uganda">Uganda</option>
+                    <option value="western-sahara">Western Sahara</option>
+                    <option value="zambia">Zambia</option>
+                    <option value="zimbabwe">Zimbabwe</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label">City :</label>  
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                  <input name="city" placeholder="cote d'ivoire" class="city"  type="text">
+              </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Municipality :</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+          <input name="commune" placeholder="abidjan" class="municipality"  type="text">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+           
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+          <input name="longitude" placeholder="city" class="pos_latitude"  type="hidden">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+           
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <input name="longitude" placeholder="city" class="pos_longitude"  type="hidden">
+            </div>
+          </div>
+        </div>
+        <!-- Text input-->
+    </fieldset>
+
+    <fieldset>
+    
+      <!-- Form Name -->
+      <legend>Operations & operator informatons</legend>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <div class="form-group4_info">        
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="pos_operator1" >
+              <option value=" ">Please select your Operator 1</option>
+              <option value="moov">MOOV</option>
+              <option value="mtn">MTN</option>
+              <option value="orange">ORANGE</option>
+              <option value="wave">WAVE</option>
+            </select>
+          </div>
+  
+          <!-- <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            
+                <div class="operation">
+                  <input type="radio" name="operation" value="deposit" id="" checked>
+                  <label for="deposit"> Deposit </label> <br>
+                  <input type="radio" value="withdrawal" name="operation" id="">
+                  <label for="withdrawal"> Withdrawal </label> <br>
+                  <input type="radio" value="deposit_withdrawal" name="operation" id="">
+                  <label for="deposit_withdrawal"> Deposit & Withdrawal </label> <br>
+                </div>
+  
+            </div>
+          </div> -->
+
+
+        </div>
+
+
+
+        <div class="operation_operator">
+        
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="pos_operator2" >
+              <option value=" " >Please select your Operator 2</option>
+              <option value="moov">MOOV</option>
+              <option value="mtn">MTN</option>
+              <option value="orange">ORANGE</option>
+              <option value="wave">WAVE</option>
+            </select>
+          </div>
+  
+          <!-- <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            
+                <div class="operation">
+                  <input type="radio" name="operation" value="deposit" id="" checked>
+                  <label for="deposit"> Deposit </label> <br>
+                  <input type="radio" value="withdrawal" name="operation" id="">
+                  <label for="withdrawal"> Withdrawal </label> <br>
+                  <input type="radio" value="deposit_withdrawal" name="operation" id="">
+                  <label for="deposit_withdrawal"> Deposit & Withdrawal </label> <br>
+                </div>
+  
+            </div>
+          </div> -->
+
+
+        </div>
+
+
+        <div class="operation_operator">
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="pos_operator3" >
+              <option value=" " >Please select your Operator 3</option>
+              <option>MOOV</option>
+              <option>MTN</option>
+              <option>ORANGE</option>
+              <option>WAVE</option>
+            </select>
+          </div>
+  
+
+          <!-- <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+
+                <div class="operation">
+                  <input type="radio" name="operation" value="deposit" id="" checked>
+                  <label for="deposit"> Deposit </label> <br>
+                  <input type="radio" value="withdrawal" name="operation" id="">
+                  <label for="withdrawal"> Withdrawal </label> <br>
+                  <input type="radio" value="deposit_withdrawal" name="operation" id="">
+                  <label for="deposit_withdrawal"> Deposit & Withdrawal </label> <br>
+                </div>
+  
+            </div>
+          </div> -->
+
+
+        </div>
+
+
+        <div class="operation_operator"> 
+        
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="pos_operator4">
+              <option value=" " >Please select your Operator 4</option>
+              <option value="moov">MOOV</option>
+              <option value="mtn ">MTN</option>
+              <option value="orange">ORANGE</option>
+              <option value="wave">WAVE</option>
+            </select>
+          </div>
+
+          <!-- <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            
+                <div class="operation">
+                  <input type="radio" name="operation" value="deposit" id="" checked>
+                  <label for="deposit"> Deposit </label> <br>
+                  <input type="radio" value="withdrawal" name="operation" id="">
+                  <label for="withdrawal"> Withdrawal </label> <br>
+                  <input type="radio" value="deposit_withdrawal" name="operation" id="">
+                  <label for="deposit_withdrawal"> Deposit & Withdrawal </label> <br>
+                </div>
+  
+            </div>
+          </div> -->
+
+
+        </div>
+
+      </div>
+      </fieldset>
+      <!-- Text input-->
+
+  
+      <fieldset>
+    
+        <!-- Form Name -->
+        <legend>Location informatons</legend>
+        
+        <!-- Text input-->
+        
+        <div class="form-group">
+          
+          <label class="col-md-4 control-label">Agence Name :</label>  
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input  name="first_name" placeholder="First Name" class="agency_name"  type="text">
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label">Phone :</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                <input name="city" placeholder="city" class="phone"  type="text">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Visibility : <i style="font-size: small;">You will automatically be visible on the map.</i> </label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                <input name="Visibility" id="Visibility"  type="checkbox">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Password :</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="password" placeholder="*******" class="password"  type="password">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Confirm password :</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="password"  class="form-control"  type="password">
+            </div>
+          </div>
+        </div>
+        <!-- Text input-->
+    </fieldset>    
+    <!-- Text input-->
+     
+    <input type="button" id="btn" value="submit">
+
+    <div class="link_connexion">
+      <span>You already have an account?, <a href="connection.html">connectez vous </a></span>
+      
+    </div>
+    
+    <!-- Select Basic -->
+
+  </div>
+  <footer>
+    <div class="">
+
+    </div>
+    Copyright @allright reserved <a href="http://"> find all pos in the contry</a>
+  </footer>
+    <script src="script.js"></script>
+</body>
+</html>
