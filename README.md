@@ -31,15 +31,12 @@ After the development phase, we each wrote a blog post to reflect on the PosMap 
 # Tutorial
 
 ## Take a tour of the deployed version at puppr.best
--> [**PuppR**](https://puppr.best/)
+-> [**PosMap**]
 
-Here is a little preview of our main feature, the swiping through other dogs' profiles:
-
-![swiping](./public/icons/browse_no_text.png)
 
 Here is a simple flow for the user experience on PuppR:
 
-![user-flow](https://i.imgur.com/hRxU79B.jpg)
+![infra](https://i.imgur.com/1on8HEg.png)
 
 ## Run PosMap with nodemon server
 
@@ -47,10 +44,12 @@ Here is a simple flow for the user experience on PuppR:
 
 # Architecture
 
+![infra](https://i.imgur.com/VmAGLIe.png)
+
 ## Overview
 Our web application is a 6-page application, coded mainly in Javascript. **PosMap** is a fullstack application, which means that we focused our time and energy on developing a backend and then a frontend application. It is perfect for easy use. We designed most of the user interface, using simple CSS and some javascript transitions and animations, on the backend we used node.js and express to build the server and api, mysql for the database and sequilize as an ORM which offers a simpler solution to interact with the database. 
 
-![infra](https://i.imgur.com/1on8HEg.png)
+
 
 ## Node.js
 For this project, we decided to focus on learning the javascript language and a new backend framework. Following the advice of mentors and professionals, we chose to learn and use Node.js
