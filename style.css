@@ -73,7 +73,7 @@ ul a:hover {
 .image {
     flex: 2;
     width: 100%;
-    background: url('./images/lading.png') no-repeat center;
+    background: url('./public/images/icon_toggle_nav.png') no-repeat center;
     background-size: cover;
     
 }
