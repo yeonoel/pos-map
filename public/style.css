@@ -2,186 +2,136 @@
 * {
     margin: 0;
     padding: 0;
-}
+  }
 
-.leaflet-top.leaflet-right {
-    display: none;
-}
-
-.map_container {
-    width: 100%;
-}
-#myMap{
-    height: 100vh;
-    width: 100%;
-}
+/* ladding page */
+.container_principal {
+    
+    height: 100%;
+    background-color: #88bfcf;
 
 
-.container {
-    font-family: Georgia, serif;
+}
+
+.container_la {
+    padding: 2rem 1rem;
+    width: 98%;
+    margin: auto;
+    background-color: white;
+    height: 600px;
+    
+
+}
+
+
+
+.navbar {
     display: flex;
-}
-
-.btn_nav_toggle { 
-    background-color: #EEEDE7;
-    z-index: 999999;
-    width: 25px;
-    position: relative;
-    bottom: 0;
-    top: 0;
-    height: 100vh;
-    padding: 1rem;
-}
-
-.nav_icon {
-    height: 25px;
-    width: 25px;
-    background: url(../images/icon_toggle_nav.png) no-repeat;
-    background-size: cover;
-}
-
-.nav { 
-    transition: all .6s ease-in-out;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 55px;
-    padding: .6rem .5rem;
-    z-index: 9999;
-    
-    background-color: #EEEDE7;
-    
-    
-}
-.nav.tog {
-    transition: all .6s ease-in-out;
-    left: -100%;
-}
-.nav_content .app_name {
-    display: flex;
-    width: 110px ;
-    color: #E43D40;
     justify-content: space-between;
     align-items: center;
-}
-.nav_content .app_name p{
-    font-weight: 900;
+    height: 70px;
 }
 
-
-.nav_content .app_name span{
-    height: 40px;
-    width: 40px;
-    display: block;
+.navbar .logo {
+    height: 80px;
+    width: 80px;
 }
-.nav_content .app_name span img{
+.navbar .logo img {
     height: 100%;
     width: 100%;
-    display: block;
 }
 
-.signup {
-    margin-top: 2rem;  
-
+ul li {
+    list-style: none;
+    margin-right: 3rem;
+ 
 }
-
-
-.enter_parameters, .signup, .bap, .setting, .return_to_accueil {
-    padding: 1rem .5rem;
-    background-color: white;
-    border-radius: .3rem;
-
-}
-.enter_parameters, .bap, .setting, .return_to_accueil {
-    margin-top: .6rem;
-}
-
-.enter_parameters{
-    
-    line-height: 5rem;
-    padding: 1rem;
-}
-
-.enter_parameters select{
-    padding: .7rem .5rem;
-}
-.btn_find input{
-    width: 100%;
-    padding: .5rem .5rem;
-    background-color: #E43D40;
-    color: white;
-    border-color: none;
-}
-
-.btn_find a, .signup a, .bap a, .setting a, .return_to_accueil a{
+ul a{
     text-decoration: none;
-}
+    color: #B9B7BD;
 
-.toggle_location {
+}
+ul a:hover {
+    transition: all .2s ease-out;
+    color: brown;
+
+}
+.navbar-nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: right;
+    
 }
 
-/* The switch - the box around the slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
+.lading {
+    
+    display: flex;
+    height: 500px;
+
+} 
+
+
+.image {
+    flex: 2;
+    width: 100%;
+    background: url('./images/lading.png') no-repeat center;
+    background-size: cover;
+    
+}
+
+.text {
+    font-family: 'Times New Roman', serif;
+    flex: 1;
+    margin-top: 4rem;
+    height: calc(100% - 300px);
+    padding: 2rem 0 0 1rem;
+}
+.text h2 {
+    
+    font-size: 3rem;
+    font-weight: 800;
+}
+.text P, .text .btn {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-size:larger;
+}
+.text a {
+    text-decoration: none;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+    color: white;
+    height: 40px;
+    font-size: 1.2rem;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    background-color: brown;
+}
+.text a:hover {
+    transition: all .2s ease-out;
+    background-color: #fff;
+    border: 1px solid brown;
+    color: brown;
+}
+
+
+
+@media (max-width: 700px) {
+    .container_principal {
+        height:    100%;
+    }
+    .lading {
+        flex-direction: row-reverse;
+        flex-direction: column;
+        height: 1000px;
+        
+    }
+    .image {
+        
+        flex: 1;
+    }
+    .text {
+       height: 300px;
+    }
+}

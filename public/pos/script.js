@@ -106,14 +106,14 @@ let markers = L.markerClusterGroup();
 let merkerUserPosition = L.markerClusterGroup();
 
 let icone = L.icon({
-    iconUrl: "./images/placeholderchange.png",
+    iconUrl: "../images/placeholderchange.png",
     iconSize: [50, 50],
     iconAnchor: [25, 50],
     popupAnchor: [0, -50]
 })
 
 let iconeMyP = L.icon({
-    iconUrl: "./images/myposition.png",
+    iconUrl: "../images/myposition.png",
     iconSize: [50, 50],
     iconAnchor: [25, 50],
     popupAnchor: [0, -50]
