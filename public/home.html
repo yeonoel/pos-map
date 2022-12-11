@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <script src="https://kit.fontawesome.com/6925fc951c.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+     <!-- css -->
+     <link rel="stylesheet" href="style.css">
+     
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="btn_nav_toggle">
+            <div class="nav_icon">
+               
+            </div>
+        </div>
+        <div class="nav">
+            
+            <div class="nav_content">
+                <div class="app_name">
+                    <span> <img src="./images/logo.png" alt="" srcset=""> </span><p>PosMap</p>
+                </div>
+                <div class="signup">
+                    <a href="#">signup</a>
+                </div>
+                <form action="" method="post">
+
+                    <div class="enter_parameters">
+                        <div class="group_select">
+                            <select name="operator" class="operator" required>
+                                <option selected disabled>-Please select your operator-</option>
+                                <option value="mtn">MTN</option>
+                                <option value="moov">MOOV</option>
+                                <option value="orange">ORANGE</option>
+                                <option value="wave"> WAVE</option>
+                              </select>
+                        </div>
+        
+                        <div class="toggle_location">
+                            show my location
+                            <label class="switch">
+                                <input type="checkbox" class="location_on" value="location_on" required>
+                                <span class="slider round"></span>
+                            </label>
+        
+                        </div>
+                        
+                        <div class="btn_find">
+                            <a href="#"> <input type="button" class="btn_submit" value="find"  disabled></a>
+                        </div>
+        
+                    </div>
+
+                </form>
+    
+                <div class="bap">
+                    <a href="./auth/inscription.html"> Become a pos</a>
+                </div>
+                <div class="setting">
+                    <a href=""> setting</a>
+                </div>
+                <div class="return_to_accueil">
+                    <a href="../index.html">Return</a>
+                </div>
+            </div>
+                
+
+        </div>
+        <div class="map_container">
+            <div id="myMap">
+
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- fichier javascript  -->
+
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"> </script>
+    <script src="script.js"> </script>
+
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+</body>
+</html>
