@@ -79,10 +79,11 @@ etc...
 
 
 
-## sequilise
+## sequilize
 
 
 ### MySql
+
 
 ### Authentication
 As our app connects people and their dogs, authentication is a necessity. Firebase provides a straightforward and easy-to-implement solution so we can focus on designing an accessible app. Users simply sign up with an existing email address and a password of their choice. Firebase Authentication does the heavy lifting to make sure users are authentic.
