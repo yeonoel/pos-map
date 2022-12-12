@@ -169,9 +169,7 @@ ul a:hover {
     text-align: left;
 }
 
-.content_nextlading_head {
-    
-}
+
 
 .content_nextlading h1{
     font-size: 0rem;
@@ -179,22 +177,99 @@ ul a:hover {
 }
 
 
-footer{
+
+section{
+padding-top: 10rem ;
+padding: 3rem;
+display: flex;
+justify-content: space-between;
+
+}
+section .section{
+    padding: 2rem;
+    width: 100rem;
+  font-size: 2rem;
+}
+section .section p{
+  text-align: left;
+}
+section .section h3{
+    padding: 3rem;
+   text-align: center;
+   font-size: 3rem;
+   font-weight: 600;
+}
+section .section img{
+    text-align: center;
+    font-size: 5rem;
+ }
+
+.section.last {
+    border-left: 1px solid white;
+    margin-top: 25rem;
+    position: relative;
+}
+.section.first {
+    border-right: 1px solid white;
+}
+section .section.last p{
+    margin-top: 5rem;
+    transition: all .4s ease-in-out;
+  }
+  section .section p:hover{
+    letter-spacing: 2px;
+    transition: all .4s ease-in-out;
+
+  }
+
+  footer{
+    line-height: 3rem;
     padding: 2rem;
     background-color: #EEEDE7;
-    padding-top: 30rem;
-    padding-bottom: 3rem;
+    padding-top: 18rem;
+    
+    
+  }
+
+  .footer_paragraphe {
+    border-right: 1px solid white;
+    padding: 2rem;
+    width: 15rem;
+    margin-bottom: 2rem;
+  }
+  footer .footer_logo {
+    display: flex;
+    align-items: center;
+
+  }
+  footer p img{
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+  footer p a{
+    text-decoration: none;
+    color: crimson;
+  }
+  footer p{
+    font-size: 2rem;
+    transition: all .4s ease-in-out;
+  }
+  footer p:hover{
+    transition: all .4s ease-in-out;
+    letter-spacing: 5px;
+  }
+  footer .copyright{
+    padding-top: .1rem;
+    border-top: 1px solid white;
     text-align: right;
+   
     
 }
 
-
-
-
-
-
-
-
+.github, .linkdin, .twitter {
+    padding-left: 3rem;
+}
 
 
 
@@ -232,4 +307,27 @@ footer{
         
         text-align: center;
     }
+    section{
+        flex-direction: column;        
+    }
+
+    section .section {
+        width: 100%;
+    }
+    section .section img{
+        text-align: center;
+        font-size: 3rem;
+     }
+    
+    .section.last {
+        border-left: none;
+        margin-top: 3rem;
+
+    }
+    .section.first {
+        border-right: none;
+    }
+    section .section.last p{
+        margin-top: 1rem;
+      }
 }
