@@ -6,7 +6,7 @@
 
 /* ladding page */
 .container_principal {
-    
+    font-family: 'Times New Roman', serif;
     height: 100%;
     background-color: #88bfcf;
 
@@ -180,8 +180,11 @@ ul a:hover {
 
 
 footer{
-    background-color: white;
+    padding: 2rem;
+    background-color: #EEEDE7;
     padding-top: 30rem;
+    padding-bottom: 3rem;
+    text-align: right;
     
 }
 
