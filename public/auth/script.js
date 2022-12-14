@@ -1,9 +1,13 @@
-const pos_inscription_location = document.querySelector('.pos_inscription_location');
+const pos_inscription_location = document.querySelector('#pos_inscription_location');
 const pos_latitude =  document.querySelector('.pos_latitude');
 const pos_longitude = document.querySelector('.pos_longitude ');
 const pos_state = document.querySelector('.state');
+const inputElements = document.querySelector('.inputElements');
+const confirm_password  = document.querySelector('.confirm_password')
+
 
 const city = document.querySelector('.city');
+const submit_btn = document.querySelector('#btn');
 
 const municipality = document.querySelector('.municipality');
 const pos_operator1 = document.querySelector('.pos_operator1');
@@ -22,6 +26,8 @@ pos_operator4.addEventListener('change', (e)=> {
 })
 
 
+// user active location
+
 let posPosition;
 pos_inscription_location.addEventListener('change', (e) => {
     if (e.target.checked) {
@@ -32,8 +38,234 @@ pos_inscription_location.addEventListener('change', (e) => {
                 const {latitude, longitude} = posPosition.coords;
                 pos_latitude.value = latitude;
                 pos_longitude.value = longitude;
-                console.log(pos_longitude.value)
+
+                elementFetch();
+                console.log(pos_latitude.value)
             })
         }
     }
 })
+
+console.log(pos_latitude.value);
+
+// btn.addEventListener('click', (e) => {
+//     if(pos_state.value) {
+//         if (city.value) {
+//             if (municipality.value)
+//         } else {
+//             city.classList('input_red');
+//         }
+//     } else {
+//         pos_state.classList('input_red');
+//     }
+// })
+
+
+// let field_error = 0;
+// pos_state.addEventListener('change', (e) => {
+//     if (e.target.value) {
+        
+//     } else {
+//         e.target.classList('input_red'); 
+//         field_error ++;
+//     }
+// })
+
+// city.addEventListener('change', (e) => {
+//     if (e.target.value) {
+        
+//     } else {
+//         e.target.classList('input_red');
+//         field_error ++;
+//     }
+// })
+
+// municipality.addEventListener('change', (e) => {
+//     if (e.target.value) {
+        
+//     } else {
+//         e.target.classList('input_red'); 
+//         field_error ++;
+//     }
+// })
+
+// pos_operator1.addEventListener('change', (e) => {
+//     if (e.target.value) {
+        
+//     } else {
+//         e.target.classList('input_red'); 
+//         field_error ++;
+//     }
+// })
+
+// agency_name.addEventListener('change', (e) => {
+//     if (e.target.value) {
+        
+//     } else {
+//         e.target.classList('input_red'); 
+//         field_error ++;
+//     }
+// })
+
+// password.addEventListener('change', (e) => {
+//     if (e.target.value) {
+        
+//     } else {
+//         e.target.classList('input_red'); 
+//         field_error ++;
+//     }
+// })
+
+// phone.addEventListener('change', (e) => {
+//     if (e.target.value) {
+        
+//     } else {
+//         e.target.classList('input_red'); 
+//         field_error ++;
+//     }
+// })
+
+const applicationPos = {
+    agency_name : "" ,
+    phone: "",
+    contry : "",
+    city : "",
+    commune : "",
+    deposit_withdrawal : "",
+    moov : "",
+    mtn : "",
+    orange : "",
+    wave : "",
+    latitude: "",
+    ongitude : "",
+    visibility : "",
+    password : ""
+}
+
+
+
+
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function elementFetch () {
+
+    submit_btn.onclick = async (e) => {
+        e.preventDefault();
+        e.stopPropagation()
+        let field_error = 0;
+        const form = new FormData();
+    
+        for (let i = 0; i < inputElements.length; i++) {
+    
+        
+    
+            if (!inputElements[i].value) {
+                inputElements[i].classList('input_red');
+                field_error ++;
+            } else {
+                applicationPos[inputElements] = inputElements[i].value;
+            }
+        }
+    
+        
+        form.append('agency_name', applicationPos.agency_name );
+        form.append('phone', applicationPos.phone );
+        form.append('contry', applicationPos.phone);
+        form.append('city', applicationPos.city);
+        form.append('commune', applicationPos.commune );
+        form.append(' deposit_withdrawal', applicationPos.deposit_withdrawal );
+        form.append('moov', applicationPos.moov);
+        form.append('mtn', applicationPos.mtn);
+        form.append('orange', applicationPos.orange);
+        form.append('wave', applicationPos.wave);
+        form.append('latitude',   applicationPos.latitude);
+        form.append('longitude', applicationPos.longitude);
+        form.append('visibility', applicationPos.visibility);
+        form.append('password', applicationPos.password );
+    
+    
+        if (field_error == 0) {
+            fetch('http://localhost:5500/api/v1/auth/signup', {
+                method : 'POST',
+                mode : 'no-cors',
+                body : form
+            })
+            .then((agent) => {console.log(agent)})
+            .catch((error) => {console.log(error)})
+            
+        }
+    
+    
+    }
+    
+    
+}
+
+
+const check_mdp = document.querySelector('.incorrect_mdp')
+let pass = password.value;
+if (pass == confirm_password.value) {
+
+}
+
+
+password.addEventListener('change', (e) => {
+    let test = 0;
+    confirm_password.addEventListener('change', (x) => {
+        if (e.target.value != x.target.value ) {
+            check_mdp.classList.add('in_correct');
+            test = 1;
+        } else {
+            if (test != 0) {
+                check_mdp.classList.remove("in_correct");
+                test = 0;
+            }
+            
+        }
+    })
+        
+})
+    
+    
+
+
+
+
+
+
+    

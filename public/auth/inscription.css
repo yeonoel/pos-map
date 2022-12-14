@@ -3,21 +3,34 @@
     box-sizing: 0;
 }
 
+.input_red {
+    border: 3px solid crimson;
+}
+.input_red:focus {
+    border: 2px solid black;
+}
+.star {
+    font-size: 1.5rem;
+    color: crimson;
+}
 
 .container {
-    width: 50%;
+    width: 70%;
     margin: auto;
     font-size: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 10rem
 }
 
 .container input, select{
     height: 1.5rem;
     margin: .4rem;
+    
+    border-color: 2px solid black;
 
 }
 
 fieldset {
+    padding: 3rem;
     margin-top: 2rem;
 }
 #btn {
@@ -26,23 +39,38 @@ fieldset {
     width: 100%;
     margin: auto;
     margin-top: 1rem;
-    background-color: aqua;
+    background-color: rgb(247, 51, 90);
     margin-bottom: 20px;
     text-align: center;
-    color: crimson;
+    color: wheat;
+    font-weight: 600;
     border-radius: 5px;
     font-size: 1.5rem;
 }
 header{
-    height: 50px;
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-weight: 600;
-    background-color: aqua;
+    background-color: #B9B7BD;
     font-size: 2rem;
+    padding: 2rem;
 }
-
+header .logo_inscription {
+    display: flex;
+    align-items: center;
+    color: crimson;
+}
+header img{
+    height: 50px;
+    width: 50px;
+}
 
 
 .operation_operator {
@@ -76,3 +104,39 @@ footer {
     background-color: #EEEDE7;
     
 }
+
+#pos_inscription_location, #Visibility {
+    height:  20px;
+    width: 30px;
+}
+
+.inputElements {
+    border-color: blue;
+}
+
+
+
+
+input.validity+span:after {
+    position: absolute; content: '✖';
+    padding-left: 5px;
+    color: #8b0000;
+  }
+  
+  input.validity:valid+span:after {
+    position: absolute;
+    content: '✓';
+    padding-left: 5px;
+    color: #009000;
+  }
+
+
+  .check_mdp{
+    display: none;
+  }
+  .check_mdp.in_correct{
+    display: block;
+    color: crimson;
+    font-style: italic;
+    text-align: right;
+  }

@@ -115,6 +115,13 @@
 
 .btn_find a, .signup a, .bap a, .setting a, .return_to_accueil a{
     text-decoration: none;
+    font-weight: 800;
+    
+    transition: all .4s ease-in-out;
+}
+.btn_find a:hover, .signup a:hover, .bap a:hover, .setting a:hover, .return_to_accueil a:hover{
+    letter-spacing: 2px;
+    transition: all .4s ease-in-out;
 }
 
 .toggle_location {

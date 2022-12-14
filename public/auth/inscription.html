@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inscription.css">
-    <title>Document</title>
+    <title>PosMap</title>
 </head>
 <body>
 
   <header>
-    Only for POS
+    <div class="logo_inscription"><img src="../images/logo.png" alt="" srcset=""> PosMap</div>
+    <div>Only for POS</div>
+
   </header>
 
     <div class="container">
 
-        <form class="well form-horizontal" action=" " method="post"  id="contact_form">
-      <fieldset>
+    <form class="well form-horizontal" action="../dashbord/dashbord.html" method="post"  id="contact_form">
+          <fieldset>
     
         <!-- Form Name -->
         <legend>Location informatons</legend>
@@ -27,18 +29,18 @@
           
           
             <div class="form-group">
-              <label for=" ">save current position <i style="font-size: small;">as your place of service pos</i>? </label>
-              <input type="checkbox" name="" id="pos_inscription_location">
+              <label for=" ">save current position <i style="font-size: small;">as your place of service pos <i class="star">*</i> </i> </label>
+              <input type="checkbox" name="" id="pos_inscription_location" class="inputElements" required>
             </div>
           
           <br>
           <div class="form-group">
-            <label class="col-md-4 control-label">Contry :</label>
+            <label class="col-md-4 control-label">Contry <i class="star">*</i> :</label>
             <div class="col-md-4 selectContainer">
               <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                  <select name="state" class="state" >
-                    <option value="" selected disabled >Please select your contry</option>
+                  <select name="state" class="state" class="inputElements">
+                    <option value="" selected disabled >Please select your contry <i class="star">*</i> :</option>
                     <option value="algeria">Algeria</option>
                     <option value="angola">Angola</option>
                     <option value="benin">Benin</option>
@@ -105,21 +107,23 @@
         </div>
         
         <div class="form-group">
-          <label class="col-md-4 control-label">City :</label>  
+          <label class="col-md-4 control-label">City <i class="star">*</i> :</label>  
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                  <input name="city" placeholder="cote d'ivoire" class="city"  type="text">
+                  <input name="city" placeholder="cote d'ivoire" class="city inputElements" required type="text"> 
+                  <span class=""></span>
               </div>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="col-md-4 control-label">Municipality :</label>  
+          <label class="col-md-4 control-label">Municipality <i class="star">*</i> :</label>  
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-          <input name="commune" placeholder="abidjan" class="municipality"  type="text">
+          <input name="commune" placeholder="abidjan" class="municipality input_red inputElements" required type="text">
+          <span class="validity"></span>
             </div>
           </div>
         </div>
@@ -128,7 +132,8 @@
            
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-          <input name="longitude" placeholder="city" class="pos_latitude"  type="hidden">
+          <input name="longitude" placeholder="city" class="pos_latitude inputElements"  type="hidden">
+          
             </div>
           </div>
         </div>
@@ -136,14 +141,14 @@
            
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-                <input name="longitude" placeholder="city" class="pos_longitude"  type="hidden">
+                <input name="longitude" placeholder="city" class="pos_longitude inputElements"  type="hidden">
             </div>
           </div>
         </div>
         <!-- Text input-->
-    </fieldset>
+     </fieldset>
 
-    <fieldset>
+     <fieldset>
     
       <!-- Form Name -->
       <legend>Operations & operator informatons</legend>
@@ -155,13 +160,14 @@
           <div class="col-md-4 selectContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="pos_operator1" >
-              <option value=" ">Please select your Operator 1</option>
+            <select name="state" class="pos_operator1 inputElements">
+              <option value=" ">Please select your Operator 1 </option>
               <option value="moov">MOOV</option>
               <option value="mtn">MTN</option>
               <option value="orange">ORANGE</option>
               <option value="wave">WAVE</option>
             </select>
+            <i class="star">*</i>
           </div>
   
           <!-- <div class="col-md-4 selectContainer">
@@ -189,9 +195,9 @@
         
           <div class="col-md-4 selectContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="pos_operator2" >
-              <option value=" " >Please select your Operator 2</option>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list inputElements"></i></span>
+            <select name="state" class="pos_operator2 inputElements" >
+              <option value=" " >Please select your Operator 2</option> 
               <option value="moov">MOOV</option>
               <option value="mtn">MTN</option>
               <option value="orange">ORANGE</option>
@@ -222,8 +228,8 @@
         <div class="operation_operator">
           <div class="col-md-4 selectContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="pos_operator3" >
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list inputElements"></i></span>
+            <select name="state" class="pos_operator3 inputElements" >
               <option value=" " >Please select your Operator 3</option>
               <option>MOOV</option>
               <option>MTN</option>
@@ -257,8 +263,8 @@
         
           <div class="col-md-4 selectContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="pos_operator4">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list "></i></span>
+            <select name="state" class="pos_operator4 inputElements">
               <option value=" " >Please select your Operator 4</option>
               <option value="moov">MOOV</option>
               <option value="mtn ">MTN</option>
@@ -300,60 +306,68 @@
         
         <div class="form-group">
           
-          <label class="col-md-4 control-label">Agence Name :</label>  
+          <label class="col-md-4 control-label">Agence Name <i class="star">*</i> :</label>  
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input  name="first_name" placeholder="First Name" class="agency_name"  type="text">
+              <input  name="first_name" placeholder="agency name" class="agency_name inputElements" required type="text">
+              <span class=""></span>
             </div>
           </div>
         </div>
         
         <div class="form-group">
-          <label class="col-md-4 control-label">Phone :</label>  
+          <label class="col-md-4 control-label">Phone <i class="star">*</i> :</label>  
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <input name="city" placeholder="city" class="phone"  type="text">
+                <input name="city" placeholder="0000000000" class="phone inputElements" maxlength="15"  type="tel" required>
+                <span class=""></span>
             </div>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="col-md-4 control-label">Visibility : <i style="font-size: small;">You will automatically be visible on the map.</i> </label>  
+          <label class="col-md-4 control-label">Visibility  <i style="font-size: small;">You will automatically be visible on the map.</i>  </label>  
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <input name="Visibility" id="Visibility"  type="checkbox">
+                <input name="" id="Visibility" class="inputElements" type="checkbox">
+                
             </div>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="col-md-4 control-label">Password :</label>  
+          <label class="col-md-4 control-label">Password <i class="star">*</i> :</label>  
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-            <input name="password" placeholder="*******" class="password"  type="password">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home "></i></span>
+            <input name="password" placeholder="*******" class="password inputElements"  type="password">
+            <span class=""></span>
             </div>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="col-md-4 control-label">Confirm password :</label>  
+          <label class="col-md-4 control-label">Confirm password <i class="star">*</i> :</label>  
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-            <input name="password"  class="form-control"  type="password">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home   inputElements"></i></span>
+            <input name="password"  class="form-control confirm_password "  type="password">
+            <span class=""></span>
             </div>
           </div>
+          
         </div>
+        <p class="check_mdp ">  Passwords don't match</p>
         <!-- Text input-->
-    </fieldset>    
-    <!-- Text input-->
+      </fieldset>
+      
+      <!-- Text input-->
      
-    <input type="button" id="btn" value="submit">
-
+      <input type="submit" id="btn" value="submit">
+    </form>  
     <div class="link_connexion">
       <span>You already have an account?, <a href="connection.html">connectez vous </a></span>
       
