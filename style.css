@@ -235,22 +235,17 @@ section .section.last p{
     
   }
 
-  
-  
-  footer .footer_paragraphe{
-    height: 500px;
-    line-height: 3rem;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-    padding-right: 2rem;
-    background-color: #EEEDE7;    
-  }
+ 
 
-  .footer_paragraphe {
+  footer .footer_paragraphe {
+    height: 460px;
+    line-height: 3rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    background-color: #EEEDE7;  
     border-right: 1px solid white;
-    padding: 2rem;
     width: 15rem;
-    margin-bottom: 2rem;
+    
   }
   footer .footer_logo {
     display: flex;
@@ -347,4 +342,8 @@ section .section.last p{
     section .section.last p{
         margin-top: 1rem;
       }
+      
+.design_bottom_page {
+    display: none;
+
 }
