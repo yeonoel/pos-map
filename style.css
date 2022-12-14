@@ -10,9 +10,17 @@
     height: 100%;
     background-color: #88bfcf;
 
-
+    
 }
 
+.design_bottom_page {
+    
+    background-color: #88bfcf;
+    height: 230px;
+    border-radius: 52% 48% 50% 50% / 0% 0% 100% 100% ;
+
+
+}
 .container_la {
     padding: 2rem 1rem;
     width: 98%;
@@ -223,12 +231,19 @@ section .section.last p{
   }
 
   footer{
-    line-height: 3rem;
-    padding: 2rem;
     background-color: #EEEDE7;
-    padding-top: 18rem;
     
-    
+  }
+
+  
+  
+  footer .footer_paragraphe{
+    height: 500px;
+    line-height: 3rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    background-color: #EEEDE7;    
   }
 
   .footer_paragraphe {
@@ -260,9 +275,11 @@ section .section.last p{
     letter-spacing: 5px;
   }
   footer .copyright{
-    padding-top: .1rem;
+    padding: 2rem;
     border-top: 1px solid white;
     text-align: right;
+    font-size: 1.5rem;
+    
    
     
 }

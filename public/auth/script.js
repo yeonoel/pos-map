@@ -2,8 +2,10 @@ const pos_inscription_location = document.querySelector('#pos_inscription_locati
 const pos_latitude =  document.querySelector('.pos_latitude');
 const pos_longitude = document.querySelector('.pos_longitude ');
 const pos_state = document.querySelector('.state');
-const inputElements = document.querySelector('.inputElements');
+const inputElements = document.querySelectorAll('.inputElements');
 const confirm_password  = document.querySelector('.confirm_password')
+
+console.log(inputElements);
 
 
 const city = document.querySelector('.city');
@@ -21,9 +23,9 @@ const password = document.querySelector('.password');
 
 
 
-pos_operator4.addEventListener('change', (e)=> {
-    console.log(e.target.value)
-})
+// pos_operator4.addEventListener('change', (e)=> {
+//     console.log(e.target.value)
+// })
 
 
 // user active location
@@ -45,8 +47,6 @@ pos_inscription_location.addEventListener('change', (e) => {
         }
     }
 })
-
-console.log(pos_latitude.value);
 
 // btn.addEventListener('click', (e) => {
 //     if(pos_state.value) {
@@ -131,13 +131,12 @@ const applicationPos = {
     contry : "",
     city : "",
     commune : "",
-    deposit_withdrawal : "",
     moov : "",
     mtn : "",
     orange : "",
     wave : "",
     latitude: "",
-    ongitude : "",
+    longitude : "",
     visibility : "",
     password : ""
 }
@@ -151,65 +150,46 @@ const applicationPos = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function elementFetch () {
 
     submit_btn.onclick = async (e) => {
         e.preventDefault();
         e.stopPropagation()
         let field_error = 0;
-        const form = new FormData();
-    
-        for (let i = 0; i < inputElements.length; i++) {
-    
         
-    
-            if (!inputElements[i].value) {
-                inputElements[i].classList('input_red');
-                field_error ++;
-            } else {
-                applicationPos[inputElements] = inputElements[i].value;
+        const form = new FormData();
+        
+        console.log(inputElements);
+
+        for (let i = 0; i < inputElements.length; i++) {
+              
+            const input = inputElements[i];
+            const inuputName = input.name;
+
+            if (input.value == "" ) {
+                return;
             }
+
+            if (input.value != "on") {
+                console.log(inuputName + ":" + input.value);  
+                applicationPos[inuputName] = input.value;
+            } 
+
+            
+            
         }
-    
+
+
+        //tes de vefication//
+        console.log(applicationPos);
+        console.log(form);
         
         form.append('agency_name', applicationPos.agency_name );
         form.append('phone', applicationPos.phone );
-        form.append('contry', applicationPos.phone);
+        form.append('contry', applicationPos.contry);
         form.append('city', applicationPos.city);
         form.append('commune', applicationPos.commune );
-        form.append(' deposit_withdrawal', applicationPos.deposit_withdrawal );
-        form.append('moov', applicationPos.moov);
+        form.append('moov', applicationPos.moov); 
         form.append('mtn', applicationPos.mtn);
         form.append('orange', applicationPos.orange);
         form.append('wave', applicationPos.wave);
@@ -218,15 +198,19 @@ function elementFetch () {
         form.append('visibility', applicationPos.visibility);
         form.append('password', applicationPos.password );
     
-    
+        
+        
         if (field_error == 0) {
-            fetch('http://localhost:5500/api/v1/auth/signup', {
+            console.log(form);
+            const res = await fetch('http://localhost:5500/api/v1/auth/signup', {
                 method : 'POST',
                 mode : 'no-cors',
                 body : form
             })
             .then((agent) => {console.log(agent)})
             .catch((error) => {console.log(error)})
+
+            console.log(res);
             
         }
     

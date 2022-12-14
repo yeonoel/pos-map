@@ -15,6 +15,7 @@
 }
 
 .container {
+
     width: 70%;
     margin: auto;
     font-size: 1.5rem;
@@ -22,11 +23,25 @@
 }
 
 .container input, select{
-    height: 1.5rem;
+    height: 2rem;
     margin: .4rem;
-    
-    border-color: 2px solid black;
+    width: 300px;
+    border-color: 4px solid #B9B7BD;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #444444;
 
+}
+.container input {
+    padding: .6rem;
+
+}
+select {
+    height: 50px;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 fieldset {
@@ -47,8 +62,7 @@ fieldset {
     border-radius: 5px;
     font-size: 1.5rem;
 }
-header{
-    
+header {
     position: fixed;
     top: 0;
     right: 0;
@@ -77,7 +91,7 @@ header img{
     margin-top: 2rem;
 }
 
-p,label {
+p, label {
     font: 1rem 'Fira Sans', sans-serif;
 }
 .operation {
@@ -91,6 +105,8 @@ p,label {
     margin-bottom: 2rem;
     text-align:  right;
 }
+
+
 
 .form-group {
     display: flex;
@@ -110,13 +126,11 @@ footer {
     width: 30px;
 }
 
-.inputElements {
+/* .inputElements {
     border-color: blue;
-}
+} */
 
-
-
-
+/* 
 input.validity+span:after {
     position: absolute; content: '✖';
     padding-left: 5px;
@@ -128,7 +142,7 @@ input.validity+span:after {
     content: '✓';
     padding-left: 5px;
     color: #009000;
-  }
+  } */
 
 
   .check_mdp{
@@ -140,3 +154,20 @@ input.validity+span:after {
     font-style: italic;
     text-align: right;
   }
+
+ select.green_border input.green_border {
+    border-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

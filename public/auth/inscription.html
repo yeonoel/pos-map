@@ -29,8 +29,8 @@
           
           
             <div class="form-group">
-              <label for=" ">save current position <i style="font-size: small;">as your place of service pos <i class="star">*</i> </i> </label>
-              <input type="checkbox" name="" id="pos_inscription_location" class="inputElements" required>
+              <label for="">save current position <i style="font-size: small;">as your place of service pos <i class="star">*</i> </i> </label>
+              <input type="checkbox" name="" id="pos_inscription_location"  name="location" class="inputElements" required>
             </div>
           
           <br>
@@ -39,7 +39,7 @@
             <div class="col-md-4 selectContainer">
               <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                  <select name="state" class="state" class="inputElements">
+                  <select name="contry" class=" state inputElements">
                     <option value="" selected disabled >Please select your contry <i class="star">*</i> :</option>
                     <option value="algeria">Algeria</option>
                     <option value="angola">Angola</option>
@@ -111,7 +111,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                  <input name="city" placeholder="cote d'ivoire" class="city inputElements" required type="text"> 
+                  <input name="city" placeholder="Abidjan" name="city" class="city inputElements" required type="text"> 
                   <span class=""></span>
               </div>
           </div>
@@ -122,17 +122,18 @@
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-          <input name="commune" placeholder="abidjan" class="municipality input_red inputElements" required type="text">
-          <span class="validity"></span>
+          <input name="commune" placeholder="Abatta" name="commune" class="municipality  inputElements" required type="text">
+          <span class=""></span>
             </div>
           </div>
         </div>
+
 
         <div class="form-group">
            
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-          <input name="longitude" placeholder="city" class="pos_latitude inputElements"  type="hidden">
+          <input name="latitude" placeholder="city" class="pos_latitude inputElements"  type="hidden">
           
             </div>
           </div>
@@ -159,15 +160,14 @@
         <div class="form-group4_info">        
           <div class="col-md-4 selectContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="state" class="pos_operator1 inputElements">
-              <option value=" ">Please select your Operator 1 </option>
-              <option value="moov">MOOV</option>
-              <option value="mtn">MTN</option>
-              <option value="orange">ORANGE</option>
-              <option value="wave">WAVE</option>
-            </select>
-            <i class="star">*</i>
+                
+            <label class="col-md-4 control-label"> MTN <i class="star">*</i> :</label>  
+            <select name="mtn" class="pos_operator1 inputElements">
+              
+              <option  value="1">On</option>
+              <option selected value="0">off</option>
+            </select> 
+            
           </div>
   
           <!-- <div class="col-md-4 selectContainer">
@@ -195,14 +195,11 @@
         
           <div class="col-md-4 selectContainer">
             <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-list inputElements"></i></span>
-            <select name="state" class="pos_operator2 inputElements" >
-              <option value=" " >Please select your Operator 2</option> 
-              <option value="moov">MOOV</option>
-              <option value="mtn">MTN</option>
-              <option value="orange">ORANGE</option>
-              <option value="wave">WAVE</option>
-            </select>
+              <label class="col-md-4 control-label"> ORANGE <i class="star">*</i> :</label>  
+              <select name="orange" class="pos_operator1 inputElements">
+                <option value="1">On</option>
+                <option selected value="0">off</option>
+              </select> 
           </div>
   
           <!-- <div class="col-md-4 selectContainer">
@@ -228,14 +225,12 @@
         <div class="operation_operator">
           <div class="col-md-4 selectContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-list inputElements"></i></span>
-            <select name="state" class="pos_operator3 inputElements" >
-              <option value=" " >Please select your Operator 3</option>
-              <option>MOOV</option>
-              <option>MTN</option>
-              <option>ORANGE</option>
-              <option>WAVE</option>
-            </select>
+              <label class="col-md-4 control-label"> WAVE <i class="star">*</i> :</label>  
+              <select name="wave" class="pos_operator1 inputElements">
+                
+                <option value="1">On</option>
+                <option selected value="0">off</option>
+              </select> 
           </div>
   
 
@@ -263,14 +258,12 @@
         
           <div class="col-md-4 selectContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-list "></i></span>
-            <select name="state" class="pos_operator4 inputElements">
-              <option value=" " >Please select your Operator 4</option>
-              <option value="moov">MOOV</option>
-              <option value="mtn ">MTN</option>
-              <option value="orange">ORANGE</option>
-              <option value="wave">WAVE</option>
-            </select>
+              <label class="col-md-4 control-label"> MOOV <i class="star">*</i> :</label>  
+              <select name="moov" class="pos_operator1 inputElements">
+
+                <option value="1">On</option>
+                <option selected value="0">off</option>
+              </select> 
           </div>
 
           <!-- <div class="col-md-4 selectContainer">
@@ -310,7 +303,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input  name="first_name" placeholder="agency name" class="agency_name inputElements" required type="text">
+              <input  name="agency_name" placeholder="agency name" class="agency_name inputElements" required type="text">
               <span class=""></span>
             </div>
           </div>
@@ -321,7 +314,7 @@
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <input name="city" placeholder="0000000000" class="phone inputElements" maxlength="15"  type="tel" required>
+                <input name="phone" placeholder="0000000000" class="phone inputElements" maxlength="15"  type="tel" required>
                 <span class=""></span>
             </div>
           </div>
@@ -331,8 +324,10 @@
           <label class="col-md-4 control-label">Visibility  <i style="font-size: small;">You will automatically be visible on the map.</i>  </label>  
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <input name="" id="Visibility" class="inputElements" type="checkbox">
+              <select name="Visibility" class="pos_operator1 inputElements">
+                <option selected value="0">off</option>
+                <option value="1">On</option>
+              </select> 
                 
             </div>
           </div>
@@ -343,7 +338,7 @@
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home "></i></span>
-            <input name="password" placeholder="*******" class="password inputElements"  type="password">
+            <input name="password" placeholder="password" class="password inputElements"  type="password">
             <span class=""></span>
             </div>
           </div>
@@ -353,8 +348,8 @@
           <label class="col-md-4 control-label">Confirm password <i class="star">*</i> :</label>  
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-home   inputElements"></i></span>
-            <input name="password"  class="form-control confirm_password "  type="password">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="password" placeholder="confirm-password"  class="form-control confirm_password "  type="password" required>
             <span class=""></span>
             </div>
           </div>
