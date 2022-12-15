@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 //user authentification
 
 exports.signup = (req, res, next) => {
+    console.log(req.body);
 
     let agency_name = req.body.agency_name;
     let contry = req.body.contry;
@@ -14,7 +15,7 @@ exports.signup = (req, res, next) => {
     let latitude = req.body.latitude;
     let longitude = req.body.longitude;
 
-    if (!agency_name == null ||  phone == null || contry == null || city == null || commune == null  || latitude == null || longitude == null ) {   
+    if (!agency_name ||  !phone|| !contry || !city || !commune || !latitude || !longitude) {   
           res.status(400).send({message: "Content can not be empty"});
 
           return;

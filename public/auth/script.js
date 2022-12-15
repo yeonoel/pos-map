@@ -1,3 +1,5 @@
+
+
 const pos_inscription_location = document.querySelector('#pos_inscription_location');
 const pos_latitude =  document.querySelector('.pos_latitude');
 const pos_longitude = document.querySelector('.pos_longitude ');
@@ -165,14 +167,21 @@ function elementFetch () {
               
             const input = inputElements[i];
             const inuputName = input.name;
+            const value = input.value;
 
-            if (input.value == "" ) {
+            if (value == "" ) {
                 return;
             }
 
-            if (input.value != "on") {
-                console.log(inuputName + ":" + input.value);  
-                applicationPos[inuputName] = input.value;
+            if (input == "latitude" || input == "longitude" || input == "moov" || input == "mtn" ||
+                input == "orange" || input == "wave" ||input == "visibility") {
+                    value = Number(value);
+
+                }
+
+            if (value != "on") {
+                console.log(inuputName + ":" + value);  
+                applicationPos[inuputName] = value;
             } 
 
             
@@ -182,7 +191,7 @@ function elementFetch () {
 
         //tes de vefication//
         console.log(applicationPos);
-        console.log(form);
+        
         
         form.append('agency_name', applicationPos.agency_name );
         form.append('phone', applicationPos.phone );
@@ -198,22 +207,20 @@ function elementFetch () {
         form.append('visibility', applicationPos.visibility);
         form.append('password', applicationPos.password );
     
-        
+        console.log(JSON.stringify(applicationPos));
         
         if (field_error == 0) {
-            console.log(form);
+            console.log(applicationPos);
             const res = await fetch('http://localhost:5500/api/v1/auth/signup', {
                 method : 'POST',
-                mode : 'no-cors',
-                body : form
-            })
-            .then((agent) => {console.log(agent)})
-            .catch((error) => {console.log(error)})
-
-            console.log(res);
-            
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body : JSON.stringify(applicationPos)
+            });
+            res.json().then((data) => { console.log(data) });
         }
-    
     
     }
     
