@@ -1,7 +1,11 @@
 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 .leaflet-top.leaflet-right {
@@ -171,7 +175,7 @@
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #178ef0;
   }
   
   input:focus + .slider {

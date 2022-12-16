@@ -5,7 +5,10 @@ const pos_latitude =  document.querySelector('.pos_latitude');
 const pos_longitude = document.querySelector('.pos_longitude ');
 const pos_state = document.querySelector('.state');
 const inputElements = document.querySelectorAll('.inputElements');
-const confirm_password  = document.querySelector('.confirm_password')
+const inputElementsRequired = document.querySelectorAll('.requiredd');
+const confirm_password  = document.querySelector('.confirm_password');
+const check_mdp = document.querySelector('.check_mdp');
+
 
 console.log(inputElements);
 
@@ -127,6 +130,34 @@ pos_inscription_location.addEventListener('change', (e) => {
 //     }
 // })
 
+
+
+let pass = password.value;
+
+if (pass != confirm_password.value) {
+    check_mdp.classList.toggle('in_correct');
+    password.classList.toggle('input_red');
+    
+}
+
+
+password.addEventListener('change', (e) => {
+    confirm_password.addEventListener('change', (x) => {
+        if (e.target.value && x.target.value == null) {
+            confirm_password.classList.toggle('input_red');
+        }
+    })
+})
+
+
+
+
+
+
+
+
+
+
 const applicationPos = {
     agency_name : "" ,
     phone: "",
@@ -150,63 +181,103 @@ const applicationPos = {
 
 // }
 
+// const tab = ["agency_name", "phone", "contry", "commune", "latitude", "longitude", "password", "city"];
+//     const operator = ["moov", "mtn", "orange", "wave"];
 
+//     for (let x = 0; x < inputElements; x++) {
+//         inputElements[x].addEventListener () => {
+//             if (input.classList.contains('input_red')) {
+
+//             }
+//         } 
+//     }
+ 
 
 function elementFetch () {
-
+    
+    const tab = ["agency_name", "phone", "contry", "commune", "latitude", "longitude", "password", "city"];
+    operator = ["moov", "mtn", "orange", "wave"];
+    
     submit_btn.onclick = async (e) => {
         e.preventDefault();
         e.stopPropagation()
         let field_error = 0;
+        let numberOperator = 0
+        const contentEmptyArr = [];
+        let contentEmpty = 0;
         
-        const form = new FormData();
         
-        console.log(inputElements);
 
         for (let i = 0; i < inputElements.length; i++) {
-              
             const input = inputElements[i];
-            const inuputName = input.name;
+            const inputName = input.name;
             const value = input.value;
 
-            if (value == "" ) {
-                return;
-            }
 
-            if (input == "latitude" || input == "longitude" || input == "moov" || input == "mtn" ||
-                input == "orange" || input == "wave" ||input == "visibility") {
-                    value = Number(value);
-
+            for (let j = 0; j < operator.length; j++) {
+                if (operator[j] == inputName && value == 1) {
+                    numberOperator ++;
                 }
-
-            if (value != "on") {
-                console.log(inuputName + ":" + value);  
-                applicationPos[inuputName] = value;
-            } 
-
+            }
             
+            for (let x = 0; x < tab.length; x++) {
+                if (tab[x] == inputName && !value) {
+                    input.classList.add('input_red');
+                    contentEmptyArr.push(input);
+                    contentEmpty ++;
+                }
+            }
+            
+            if (value != "on") {
+                console.log(inputName + ":" + value);  
+                applicationPos[inputName] = value;
+            }
             
         }
+        function validField(e) {
+            if (e.target.value) {
+                e.target.classList.remove('input_red');
+                e.target.classList.add('green');
+            } else {
+                e.target.classList.add('input_red');
+                e.target.classList.remove('green');
+            }
+        }
+
+      
+        if (numberOperator == 0) {
+            pos_operator1.addEventListener('change', (e) => {
+                validField(e);
+            });
+            field_error ++;
+        }
+
+        if (contentEmpty) {
+            
+            
+            confirm_password.addEventListener('change', (e) => {
+                validField(e);
+            });
+            for (let x = 0; x < contentEmptyArr.length; x++) {
+                
+                contentEmptyArr[x].addEventListener('change', (e) => {
+                    validField(e);
+                })
+            } 
+            
+            field_error ++;
+        }
+
+        
+        
+            
+        
 
 
         //tes de vefication//
         console.log(applicationPos);
         
         
-        form.append('agency_name', applicationPos.agency_name );
-        form.append('phone', applicationPos.phone );
-        form.append('contry', applicationPos.contry);
-        form.append('city', applicationPos.city);
-        form.append('commune', applicationPos.commune );
-        form.append('moov', applicationPos.moov); 
-        form.append('mtn', applicationPos.mtn);
-        form.append('orange', applicationPos.orange);
-        form.append('wave', applicationPos.wave);
-        form.append('latitude',   applicationPos.latitude);
-        form.append('longitude', applicationPos.longitude);
-        form.append('visibility', applicationPos.visibility);
-        form.append('password', applicationPos.password );
-    
         console.log(JSON.stringify(applicationPos));
         
         if (field_error == 0) {
@@ -220,30 +291,32 @@ function elementFetch () {
                 body : JSON.stringify(applicationPos)
             });
             res.json().then((data) => { console.log(data) });
+            window.location.href="../dashbord/dashbord.html" ; 
         }
     
     }
-    
-    
-}
 
-
-const check_mdp = document.querySelector('.incorrect_mdp')
-let pass = password.value;
-if (pass == confirm_password.value) {
 
 }
 
 
+
+
+let test = 0;
 password.addEventListener('change', (e) => {
-    let test = 0;
+    
     confirm_password.addEventListener('change', (x) => {
-        if (e.target.value != x.target.value ) {
+        if (e.target.value == '' || x.target.value == '' ||
+             e.target.value != x.target.value ) {
             check_mdp.classList.add('in_correct');
+            password.classList.add('input_red');
+            confirm_password.classList.add('input_red');
             test = 1;
         } else {
             if (test != 0) {
                 check_mdp.classList.remove("in_correct");
+                password.classList.remove('input_red');
+                confirm_password.classList.remove('input_red');
                 test = 0;
             }
             
@@ -251,6 +324,21 @@ password.addEventListener('change', (e) => {
     })
         
 })
+
+
+// function validate() { 
+//     var msg; 
+//     var str = document.getElementById("mdp").value; 
+//     if (str.match( /[0-9]/g) && 
+//             str.match( /[A-Z]/g) && 
+//             str.match(/[a-z]/g) && 
+//             str.match( /[^a-zA-Z\d]/g) &&
+//             str.length >= 10) 
+//         msg = "<p style='color:green'>Mot de passe fort.</p>"; 
+//     else 
+//         msg = "<p style='color:red'>Mot de passe faible.</p>"; 
+//     document.querySelector("msg").innerHTML= msg; 
+// } 
     
     
 

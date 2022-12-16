@@ -15,11 +15,9 @@ exports.signup = (req, res, next) => {
     let latitude = req.body.latitude;
     let longitude = req.body.longitude;
 
-    if (!agency_name ||  !phone|| !contry || !city || !commune || !latitude || !longitude) {   
+    if (!agency_name ||  !phone || !contry || !city || !commune || !latitude || !longitude) {   
           res.status(400).send({message: "Content can not be empty"});
-
           return;
-        
         }
     bcrypt.hash(req.body.password, 10)
         .then(hash => {

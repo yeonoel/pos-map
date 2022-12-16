@@ -1,60 +1,94 @@
-
-      html, body {
-        display: flex;
-        justify-content: center;
-        font-family: Roboto, Arial, sans-serif;
-        font-size: 15px;
-        }
-        form {
-        border: 5px solid #f1f1f1;
-        }
-        input[type=text], input[type=password] {
-        width: 100%;
-        padding: 16px 8px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        }
-        .icon {
-        font-size: 110px;
-        display: flex;
-        justify-content: center;
-        color: #4286f4;
-        }
-        button {
-        background-color: #4286f4;
-        color: white;
-        padding: 14px 0;
-        margin: 10px 0;
-        border: none;
-        cursor: grab;
-        width: 48%;
-        }
-        h1 {
-        text-align:center;
-        fone-size:18;
-        }
-        button:hover {
-        opacity: 0.8;
-        }
-        .formcontainer {
-        text-align: center;
-        margin: 24px 50px 12px;
-        }
-        .container {
-        padding: 16px 0;
-        text-align:left;
-        }
-        span.psw {
-        float: right;
-        padding-top: 0;
-        padding-right: 15px;
-        }
-        /* Change styles for span on extra small screens */
-        @media screen and (max-width: 300px) {
-          span.psw {
-          display: block;
-          float: none;
-          }
-        }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: #dfe9f5;
+}
+.wrapper{
+  width: 330px;
+  padding: 2rem 0 1rem 0;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+h1{
+  font-size: 2rem;
+  color: #07001f;
+}
+p{
+  margin-bottom: 1.7rem;
+}
+form input{
+  width: 85%;
+  outline: none;
+  border: none;
+  background: #dfe9f5;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.recover{
+  text-align: right;
+  font-size: 0.8rem;
+  margin: 0.2rem 1.7rem 0 0;
+}
+.recover a{
+  text-decoration: none;
+  color: #07001f;
+}
+button{
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: 8px 0;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 85%;
+  background: tomato;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover{
+  background: rgba(122, 30, 30, 0.767);
+}
+.or{
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+.icons i{
+  color: #07001f;
+  padding: 00.8rem 1.5rem;
+  border-radius: 10px;
+  margin-left: .9rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 2px solid #dfe9f5;
+}
+.icons i:hover{
+  color: #fff !important;
+  background: #07001f;
+  transition: 1s;
+}
+.icons i:first-child{
+  color: green;
+}
+.icons i:last-child{
+  color: blue;
+}
+.not-member{
+  font-size: 0.8rem;
+  margin-top: 1.4rem;
+}
+.not-member a{
+  color: tomato;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}

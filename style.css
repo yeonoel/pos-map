@@ -1,21 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 * {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
   }
 
 /* ladding page */
 .container_principal {
     font-family: 'Times New Roman', serif;
     height: 100%;
-    background-color: #88bfcf;
-
-    
+    background-color: #dfe9f5;
 }
 
 .design_bottom_page {
-    
-    background-color: #88bfcf;
+    background-color: #dfe9f5;
     height: 230px;
     border-radius: 52% 48% 50% 50% / 0% 0% 100% 100% ;
 

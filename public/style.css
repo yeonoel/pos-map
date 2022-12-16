@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
   }
 
 /* ladding page */
@@ -106,7 +108,7 @@ ul a:hover {
     justify-content: center;
     align-items: center;
     border-radius: 7px;
-    background-color: brown;
+    background-color: tomato;
 }
 .text a:hover {
     transition: all .2s ease-out;

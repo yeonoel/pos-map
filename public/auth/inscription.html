@@ -39,7 +39,7 @@
             <div class="col-md-4 selectContainer">
               <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                  <select name="contry" class=" state inputElements">
+                  <select name="contry" class=" state inputElements requiredd" required>
                     <option value="" selected disabled >Please select your contry <i class="star">*</i> :</option>
                     <option value="algeria">Algeria</option>
                     <option value="angola">Angola</option>
@@ -111,7 +111,7 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                  <input name="city" placeholder="Abidjan" name="city" class="city inputElements" required type="text"> 
+                  <input name="city" placeholder="Abidjan" name="city" class=" requiredd city inputElements" required type="text"> 
                   <span class=""></span>
               </div>
           </div>
@@ -122,7 +122,7 @@
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-          <input name="commune" placeholder="Abatta" name="commune" class="municipality  inputElements" required type="text">
+          <input name="commune" placeholder="Abatta" name="commune" class=" requiredd municipality  inputElements" required type="text">
           <span class=""></span>
             </div>
           </div>
@@ -133,7 +133,7 @@
            
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-          <input name="latitude" placeholder="city" class="pos_latitude inputElements"  type="hidden">
+          <input name="latitude" placeholder="city" class=" pos_latitude inputElements"  type="hidden">
           
             </div>
           </div>
@@ -142,7 +142,7 @@
            
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-                <input name="longitude"  placeholder="city" class="pos_longitude inputElements"  type="hidden" type="number">
+                <input name="longitude"  placeholder="city" class="  pos_longitude inputElements"  type="hidden" >
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@
             <div class="input-group">
                 
             <label class="col-md-4 control-label"> MTN <i class="star">*</i> :</label>  
-            <select name="mtn" class="pos_operator1 inputElements">
+            <select name="mtn" class="requiredd pos_operator1 inputElements">
               
               <option  value="1">On</option>
               <option selected value="0">off</option>
@@ -195,8 +195,8 @@
         
           <div class="col-md-4 selectContainer">
             <div class="input-group">
-              <label class="col-md-4 control-label"> ORANGE <i class="star">*</i> :</label>  
-              <select name="orange" class="pos_operator1 inputElements">
+              <label class="col-md-4 control-label"> ORANGE  :</label>  
+              <select name="orange" class=" pos_operator2 inputElements">
                 <option value="1">On</option>
                 <option selected value="0">off</option>
               </select> 
@@ -225,8 +225,8 @@
         <div class="operation_operator">
           <div class="col-md-4 selectContainer">
             <div class="input-group">
-              <label class="col-md-4 control-label"> WAVE <i class="star">*</i> :</label>  
-              <select name="wave" class="pos_operator1 inputElements">
+              <label class="col-md-4 control-label"> WAVE  :</label>  
+              <select name="wave" class=" pos_operator3 inputElements">
                 
                 <option value="1">On</option>
                 <option selected value="0">off</option>
@@ -258,8 +258,8 @@
         
           <div class="col-md-4 selectContainer">
             <div class="input-group">
-              <label class="col-md-4 control-label"> MOOV <i class="star">*</i> :</label>  
-              <select name="moov" class="pos_operator1 inputElements">
+              <label class="col-md-4 control-label"> MOOV  :</label>  
+              <select name="moov" class=" pos_operator4 inputElements">
 
                 <option value="1">On</option>
                 <option selected value="0">off</option>
@@ -303,7 +303,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input  name="agency_name" placeholder="agency name" class="agency_name inputElements" required type="text">
+              <input  name="agency_name" placeholder="agency name" class="requiredd agency_name inputElements" required type="text">
               <span class=""></span>
             </div>
           </div>
@@ -314,7 +314,7 @@
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <input name="phone" placeholder="0000000000" class="phone inputElements" maxlength="15"  type="tel" required>
+                <input name="phone" placeholder="0000000000" class="requiredd phone inputElements" maxlength="15"  type="tel" required>
                 <span class=""></span>
             </div>
           </div>
@@ -338,7 +338,7 @@
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home "></i></span>
-            <input name="password" placeholder="password" class="password inputElements"  type="password">
+            <input name="password" placeholder="password" class="requiredd password inputElements"  type="password">
             <span class=""></span>
             </div>
           </div>
@@ -349,13 +349,13 @@
             <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-            <input name="password" placeholder="confirm-password"  class="form-control confirm_password "  type="password" required>
+            <input name="password" placeholder="confirm-password"  class=" requiredd form-control confirm_password "  type="password" required>
             <span class=""></span>
             </div>
           </div>
           
         </div>
-        <p class="check_mdp ">  Passwords don't match</p>
+        <p class="check_mdp  ">  Passwords don't match</p>
         <!-- Text input-->
       </fieldset>
       

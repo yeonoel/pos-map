@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 *{
     margin: 0;
     box-sizing: 0;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background: #dfe9f5;
+}
+input, select {
+    background: #dfe9f5;
 }
 
 .input_red {
@@ -15,11 +23,14 @@
 }
 
 .container {
-
+    background: #fff;
     width: 70%;
     margin: auto;
     font-size: 1.5rem;
-    margin-top: 10rem
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    border-radius: 5px;
+    padding: .5rem 2rem;
 }
 
 .container input, select{
@@ -54,7 +65,7 @@ fieldset {
     width: 100%;
     margin: auto;
     margin-top: 1rem;
-    background-color: rgb(247, 51, 90);
+    background-color: tomato;
     margin-bottom: 20px;
     text-align: center;
     color: wheat;
@@ -159,15 +170,9 @@ input.validity+span:after {
     border-color: green;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.input_red {
+    border: 3px solid red;
+}
+.green {
+    border: 3px solid green;
+}
