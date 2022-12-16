@@ -195,7 +195,7 @@ justify-content: space-between;
 section .section{
     padding: 2rem;
     width: 100rem;
-  font-size: 2rem;
+    font-size: 1.2rem;
 }
 section .section p{
   text-align: left;
@@ -261,7 +261,7 @@ section .section.last p{
     color: crimson;
   }
   footer p{
-    font-size: 2rem;
+    font-size: 1.2rem;
     transition: all .4s ease-in-out;
   }
   footer p:hover{
@@ -272,7 +272,7 @@ section .section.last p{
     padding: 2rem;
     border-top: 1px solid white;
     text-align: right;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     
    
     

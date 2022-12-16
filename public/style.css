@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +8,18 @@
 
 /* ladding page */
 .container_principal {
-    
+    font-family: 'Times New Roman', serif;
     height: 100%;
-    background-color: #88bfcf;
+    background-color: #dfe9f5;
+}
+
+.design_bottom_page {
+    background-color: #dfe9f5;
+    height: 230px;
+    border-radius: 52% 48% 50% 50% / 0% 0% 100% 100% ;
 
 
 }
-
 .container_la {
     padding: 2rem 1rem;
     width: 98%;
@@ -108,7 +113,7 @@ ul a:hover {
     justify-content: center;
     align-items: center;
     border-radius: 7px;
-    background-color: tomato;
+    background-color: brown;
 }
 .text a:hover {
     transition: all .2s ease-out;
@@ -116,6 +121,174 @@ ul a:hover {
     border: 1px solid brown;
     color: brown;
 }
+
+
+
+
+
+/* Ladding page design */
+
+.content_nextlading {
+    
+    text-align: center;
+}
+
+.container_location_pos, .container_all_location_pos,  .container_search_pos{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.container_all_location_pos{
+    margin: 2rem;
+
+}
+
+.container_all_location_pos{
+    height: 700px;
+    background-color: aquamarine;
+
+}
+.search_img, .search_text, .all_location_text, .location_img, .location_text{
+    padding: 3rem;
+}
+
+.container_location_pos{
+    background-color: #eaeaf4;
+    opacity: 0.9;
+    background-image: linear-gradient(-45deg, #eaeaf4, #eaeaf4 50%, #ff9191 50%, #ff9191);
+    background-size: 4px 4px;
+}
+
+/* .all_location_img {
+    height: 500px;
+    width: 100%;
+}  */
+.all_location_img img{
+    height: 100%;
+    width: 100%;
+} 
+.location_text, .search_text, .all_location_text{
+    padding: 2rem;
+    color: black;
+    font-size: 3rem;
+    text-align: left;
+}
+
+
+
+.content_nextlading h1{
+    font-size: 0rem;
+    color: white;
+}
+
+
+
+section{
+padding-top: 10rem ;
+padding: 3rem;
+display: flex;
+justify-content: space-between;
+
+}
+section .section{
+    padding: 2rem;
+    width: 100rem;
+    font-size: 1.2rem;
+}
+section .section p{
+  text-align: left;
+}
+section .section h3{
+    padding: 3rem;
+   text-align: center;
+   font-size: 3rem;
+   font-weight: 600;
+}
+section .section img{
+    text-align: center;
+    font-size: 5rem;
+ }
+
+.section.last {
+    border-left: 1px solid white;
+    margin-top: 25rem;
+    position: relative;
+}
+.section.first {
+    border-right: 1px solid white;
+}
+section .section.last p{
+    margin-top: 5rem;
+    transition: all .4s ease-in-out;
+  }
+  section .section p:hover{
+    letter-spacing: 2px;
+    transition: all .4s ease-in-out;
+
+  }
+
+  footer{
+    background-color: #EEEDE7;
+    
+  }
+
+ 
+
+  footer .footer_paragraphe {
+    height: 460px;
+    line-height: 3rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    background-color: #EEEDE7;  
+    border-right: 1px solid white;
+    width: 15rem;
+    
+  }
+  footer .footer_logo {
+    display: flex;
+    align-items: center;
+
+  }
+  footer p img{
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+  footer p a{
+    text-decoration: none;
+    color: crimson;
+  }
+  footer p{
+    font-size: 1.2rem;
+    transition: all .4s ease-in-out;
+  }
+  footer p:hover{
+    transition: all .4s ease-in-out;
+    letter-spacing: 5px;
+  }
+  footer .copyright{
+    padding: 2rem;
+    border-top: 1px solid white;
+    text-align: center;
+    font-size: 1.1rem;
+    
+   
+    
+}
+
+.github, .linkdin, .twitter {
+    padding-left: 3rem;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -131,9 +304,47 @@ ul a:hover {
     }
     .image {
         
-        flex: 1;
+        display: none;
     }
     .text {
        height: 300px;
     }
+
+    .container_location_pos, .container_all_location_pos,  .container_search_pos{
+       flex-direction: column;
+        justify-content: center;
+    }
+    .location_text, .search_text, .all_location_text{
+        
+        text-align: center;
+    }
+    section{
+        flex-direction: column;        
+    }
+
+    section .section {
+        width: 100%;
+    }
+    section .section img{
+        text-align: center;
+        font-size: 3rem;
+     }
+    
+    .section.last {
+        border-left: none;
+        margin-top: 3rem;
+
+    }
+    .section.first {
+        border-right: none;
+    }
+    section .section.last p{
+        margin-top: 1rem;
+      }
+      
+.design_bottom_page {
+    display: none;
+
+}
+
 }
